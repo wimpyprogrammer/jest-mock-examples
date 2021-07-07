@@ -1,0 +1,22 @@
+{
+  "name": "jest-mock-examples",
+  "description": "Examples of mocking in Jest tests",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wimpyprogrammer/jest-mock-examples.git"
+  },
+  "main": "index.js",
+  "author": "Drew Keller <drew@wimpyprogrammer.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "jest": "^27.0.6"
+  }
+}
