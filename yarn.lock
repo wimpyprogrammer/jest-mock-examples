@@ -2513,6 +2513,16 @@ lodash.debounce@^4.0.8:
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
+lodash.identity@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/lodash.identity/-/lodash.identity-3.0.0.tgz#ad7bc6a4e647d79c972e1b80feef7af156267876"
+  integrity sha1-rXvGpOZH15yXLhuA/u968VYmeHY=
+
+lodash.tolower@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/lodash.tolower/-/lodash.tolower-4.1.2.tgz#d6d309ac43eef8d44e8ded66b73dab0beb0806d7"
+  integrity sha1-1tMJrEPu+NROje1mtz2rC+sIBtc=
+
 lodash@^4.7.0:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
