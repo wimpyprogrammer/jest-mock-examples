@@ -22,6 +22,6 @@ jobs:
         with:
           node-version: '14'
 
-      - run: npm ci
+      - run: yarn --frozen-lockfile
 
-      - run: npm run test
+      - run: yarn test
