@@ -1,5 +1,8 @@
 import moduleToTest from '../../src/module-to-test';
 
+// Just a formality, not required because automocking is disabled
+jest.unmock('../../src/module-to-test');
+
 describe('no calls to jest.mock()', () => {
 	it('does not mock core module that has a __mock__', () => {
 		const result = moduleToTest.coreWithMock();

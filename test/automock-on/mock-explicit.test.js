@@ -6,6 +6,9 @@ import localWithMock from '../../src/module-with-mock';
 import localWithoutMock from '../../src/module-without-mock';
 import moduleToTest from '../../src/module-to-test';
 
+// Required because automocking is enabled
+jest.unmock('../../src/module-to-test');
+
 jest.mock('util');
 jest.mock('path');
 jest.mock('lodash.identity');
@@ -23,31 +26,31 @@ localWithoutMock.mockReturnValueOnce('explicit value');
 describe('jest.mock() with explicit mockReturnValueOnce()', () => {
 	it('mocks core module that has a __mock__', () => {
 		const result = moduleToTest.coreWithMock();
-		expect(result).toBe(undefined);
+		expect(result).toBe('explicit value');
 	});
 
 	it('mocks core module that does not have a __mock__', () => {
 		const result = moduleToTest.coreWithoutMock();
-		expect(result).toBe(undefined);
+		expect(result).toBe('explicit value');
 	});
 
 	it('mocks external module that has a __mock__', () => {
 		const result = moduleToTest.externalWithMock();
-		expect(result).toBe(undefined);
+		expect(result).toBe('explicit value');
 	});
 
 	it('mocks external module that does not have a __mock__', () => {
 		const result = moduleToTest.externalWithoutMock();
-		expect(result).toBe(undefined);
+		expect(result).toBe('explicit value');
 	});
 
 	it('mocks local module that has a __mock__', () => {
 		const result = moduleToTest.localWithMock();
-		expect(result).toBe(undefined);
+		expect(result).toBe('explicit value');
 	});
 
 	it('mocks local module that does not have a __mock__', () => {
 		const result = moduleToTest.localWithoutMock();
-		expect(result).toBe(undefined);
+		expect(result).toBe('explicit value');
 	});
 });

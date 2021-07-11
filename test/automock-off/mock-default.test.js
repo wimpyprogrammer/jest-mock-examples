@@ -1,5 +1,8 @@
 import moduleToTest from '../../src/module-to-test';
 
+// Just a formality, not required because automocking is disabled
+jest.unmock('../../src/module-to-test');
+
 jest.mock('util');
 jest.mock('path');
 jest.mock('lodash.identity');

@@ -1,10 +1,13 @@
 import moduleToTest from '../../src/module-to-test';
 
+// Just a formality, not required because automocking is disabled
+jest.unmock('../../src/module-to-test');
+
 jest.mock('util', () => ({
-	format: () => 'mock factory value'
+	format: () => 'mock factory value',
 }));
 jest.mock('path', () => ({
-	join: () => 'mock factory value'
+	join: () => 'mock factory value',
 }));
 jest.mock('lodash.identity', () => ({
 	__esModule: true,
