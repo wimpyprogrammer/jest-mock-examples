@@ -4,12 +4,12 @@ import moduleToTest from '../../src/module-to-test';
 jest.unmock('../../src/module-to-test');
 
 describe('no calls to jest.mock()', () => {
-	it('mocks core module that has a __mock__', () => {
+	it('does not mock core module that has a __mock__', () => {
 		const result = moduleToTest.coreWithMock();
 		expect(result).toBe('actual value');
 	});
 
-	it('mocks core module that does not have a __mock__', () => {
+	it('does not mock core module that does not have a __mock__', () => {
 		const result = moduleToTest.coreWithoutMock();
 		expect(result).toBe('actual value');
 	});
