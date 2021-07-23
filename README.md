@@ -45,7 +45,9 @@ Examples of mocking in Jest tests
     <td>factory</td>
   </tr>
   <tr>
-    <td><code>jest.mock()<br>mockFn.mockReturnValue(value)</code></td>
+    <td><code>jest.mock()
+
+mockFn.mockReturnValue(value)</code></td>
     <td>value</td>
     <td>value</td>
     <td>value</td>
@@ -72,7 +74,9 @@ Examples of mocking in Jest tests
     <td>factory</td>
   </tr>
   <tr>
-    <td><code>jest.doMock()<br>mockFn.mockReturnValue(value)</code></td>
+    <td><code>jest.doMock()
+
+mockFn.mockReturnValue(value)</code></td>
     <td>value</td>
     <td>value</td>
     <td>value</td>
@@ -149,7 +153,9 @@ Examples of mocking in Jest tests
     <td>factory</td>
   </tr>
   <tr>
-    <td><code>jest.mock()<br>mockFn.mockReturnValue(value)</code></td>
+    <td><code>jest.mock()
+
+mockFn.mockReturnValue(value)</code></td>
     <td>value</td>
     <td>value</td>
     <td>value</td>
@@ -176,7 +182,9 @@ Examples of mocking in Jest tests
     <td>factory</td>
   </tr>
   <tr>
-    <td><code>jest.doMock()<br>mockFn.mockReturnValue(value)</code></td>
+    <td><code>jest.doMock()
+
+mockFn.mockReturnValue(value)</code></td>
     <td>value</td>
     <td>value</td>
     <td>value</td>
