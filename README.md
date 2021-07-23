@@ -3,3 +3,213 @@
 [![Tests](https://github.com/wimpyprogrammer/jest-mock-examples/actions/workflows/tests.yml/badge.svg)](https://github.com/wimpyprogrammer/jest-mock-examples/actions/workflows/tests.yml)
 
 Examples of mocking in Jest tests
+
+## Summary
+
+### When Jest Automocking Enabled
+
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th colspan="3"><center>Has __mocks__ file</center></th>
+    <th colspan="3"><center>No __mocks__ file</center></th>
+  </tr>
+  <tr>
+    <th></th>
+    <th><center>Core</center></th>
+    <th><center>External</center></th>
+    <th><center>Local</center></th>
+    <th><center>Core</center></th>
+    <th><center>External</center></th>
+    <th><center>Local</center></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><code>jest.mock()</code></td>
+    <td>__mocks__</td>
+    <td>__mocks__</td>
+    <td>__mocks__</td>
+    <td>generated</td>
+    <td>generated</td>
+    <td>generated</td>
+  </tr>
+  <tr>
+    <td><code>jest.mock(factory)</code></td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+  </tr>
+  <tr>
+    <td><code>jest.mock()<br>mockFn.mockReturnValue(value)</code></td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+  </tr>
+  <tr>
+    <td><code>jest.doMock()</code></td>
+    <td>__mocks__</td>
+    <td>__mocks__</td>
+    <td>__mocks__</td>
+    <td>generated</td>
+    <td>generated</td>
+    <td>generated</td>
+  </tr>
+  <tr>
+    <td><code>jest.doMock(factory)</code></td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+  </tr>
+  <tr>
+    <td><code>jest.doMock()<br>mockFn.mockReturnValue(value)</code></td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+  </tr>
+  <tr>
+    <td><code>jest.unmock()</code></td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+  </tr>
+  <tr>
+    <td><code>jest.dontMock()</code></td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+  </tr>
+  <tr>
+    <td>(nothing)</td>
+    <td>unmocked</td>
+    <td>__mocks__</td>
+    <td>__mocks__</td>
+    <td>unmocked</td>
+    <td>generated</td>
+    <td>generated</td>
+  </tr>
+</tbody>
+</table>
+
+### When Jest Automocking Disabled
+
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th colspan="3"><center>Has __mocks__ file</center></th>
+    <th colspan="3"><center>No __mocks__ file</center></th>
+  </tr>
+  <tr>
+    <th></th>
+    <th><center>Core</center></th>
+    <th><center>External</center></th>
+    <th><center>Local</center></th>
+    <th><center>Core</center></th>
+    <th><center>External</center></th>
+    <th><center>Local</center></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><code>jest.mock()</code></td>
+    <td>__mocks__</td>
+    <td>__mocks__</td>
+    <td>__mocks__</td>
+    <td>generated</td>
+    <td>generated</td>
+    <td>generated</td>
+  </tr>
+  <tr>
+    <td><code>jest.mock(factory)</code></td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+  </tr>
+  <tr>
+    <td><code>jest.mock()<br>mockFn.mockReturnValue(value)</code></td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+  </tr>
+  <tr>
+    <td><code>jest.doMock()</code></td>
+    <td>__mocks__</td>
+    <td>__mocks__</td>
+    <td>__mocks__</td>
+    <td>generated</td>
+    <td>generated</td>
+    <td>generated</td>
+  </tr>
+  <tr>
+    <td><code>jest.doMock(factory)</code></td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+    <td>factory</td>
+  </tr>
+  <tr>
+    <td><code>jest.doMock()<br>mockFn.mockReturnValue(value)</code></td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+    <td>value</td>
+  </tr>
+  <tr>
+    <td><code>jest.unmock()</code></td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+  </tr>
+  <tr>
+    <td><code>jest.dontMock()</code></td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+  </tr>
+  <tr>
+    <td>(nothing)</td>
+    <td>unmocked</td>
+    <td>__mocks__</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+    <td>unmocked</td>
+  </tr>
+</tbody>
+</table>
