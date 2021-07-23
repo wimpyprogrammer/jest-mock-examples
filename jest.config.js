@@ -2,6 +2,7 @@ const baseConfig = {
 	testEnvironment: 'node',
 
 	// Prevent tests from affecting each other
+	resetModules: true,
 	restoreMocks: true,
 };
 
