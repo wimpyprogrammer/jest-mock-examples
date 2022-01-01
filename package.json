@@ -18,7 +18,7 @@
     "lodash.tolower": "^4.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.5",
+    "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.5",
     "jest": "^27.4.5"
   }
