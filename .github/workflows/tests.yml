@@ -17,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        jest-version: [24, 25, 26, 27, latest]
+        jest-version: [24, 25, 26, 27, 28, latest]
       fail-fast: false
 
     steps:
